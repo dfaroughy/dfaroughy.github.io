@@ -4,7 +4,7 @@ collection: publications
 category: manuscripts
 permalink: /publication/2020-15-12-bayesian-new-physics
 excerpt: 'This paper presents a Bayesian probabilistic approach to identify hidden patterns indicative of new physics in collider event data.'
-date: 2020-15-12
+date: 2020-12-15
 venue: 'Preprint'
 slidesurl: ''
 paperurl: 'https://inspirehep.net/literature/1836854'

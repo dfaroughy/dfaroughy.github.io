@@ -2,7 +2,7 @@
 title: "EPiC-ly Fast Particle Cloud Generation with Flow-Matching and Diffusion"
 collection: publications
 category: manuscripts
-date: 2023-29-09
+date: 2023-09-29
 venue: 'Preprint'
 slidesurl: ''
 excerpt: 'Jets at the LHC, typically consisting of a large
