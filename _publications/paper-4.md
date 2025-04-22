@@ -4,8 +4,9 @@ collection: publications
 category: manuscripts
 date: 2023-09-29
 venue: 'Preprint'
-slidesurl: ''
-excerpt: 'Jets at the LHC, typically consisting of a large
+paperurl: 'https://arxiv.org/abs/2310.00049'
+---
+Jets at the LHC, typically consisting of a large
 number of highly correlated particles, are a fascinating
 laboratory for deep generative modeling. In this paper,
 we present two novel methods that generate LHC jets
@@ -26,10 +27,6 @@ maintaining fast generation speed. Most notably, we find
 that the EPiC-FM model consistently outperforms all the
 other generative models considered here across every
 metric. Finally, we also introduce two new particle cloud
-performance metrics: the first based on the KullbackLeibler divergence between feature distributions, the
+performance metrics: the first based on the Kullback-Leibler divergence between feature distributions, the
 second is the negative log-posterior of a multi-model
 ParticleNet classifier.'
-paperurl: 'https://inspirehep.net/literature/1836854'
-bibtexurl: ''
-citation: 'Darius A. Faroughy. (2023). "EPiC-ly Fast Particle Cloud Generation with Flow-Matching and Diffusion." e-Print: 2310.00049 [hep-ph].'
----

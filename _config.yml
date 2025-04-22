@@ -9,10 +9,12 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Darius A. Faroughy"
+title                    : "Darius's Homepage'"
 title_separator          : "-"
-name                     : &name "Darius Faroughy"
-description              : &description "Theoretical Particle Physicist | Machine Learning"
+name                     : &name "Darius A. Faroughy"
+description              : &description "Machine Learning | Theoretical Particle Physicist |
+                            Researcher at New High Energy Theory Center, Rutgers University | 
+                            PhD in Physics"
 url                      : https://dfaroughy.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "dfaroughy/dfaroughy.github.io"
@@ -23,10 +25,10 @@ repository               : "dfaroughy/dfaroughy.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "D. A. Faroughy"
+  name             : "Darius A. Faroughy"
   pronouns         : # example: "she/her"  
-  bio              : "Machine Learning | Researcher | Theoretical Particle Physicist"
-  location         : "New York City / New Jersey"
+  bio              : "Machine Learning | Theoretical Particle PhysicistMachine Learning | Theoretical Particle Physicist |
+                      Researcher at NHETC, Rutgers University | PhD in PhysicsNew York City / New Jersey"
   employer         : "Rutgers University"
   uri              : # URL
   email            : "dariusfar@gmail.com" 
