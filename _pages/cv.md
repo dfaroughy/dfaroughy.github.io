@@ -11,26 +11,22 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Particle Physics, Jozef Stefan Institute, Slovenia, 2019
+* Postgraduate Diploma in High Energy Physics, ICTP, Italy, 2012
+* B.S. in Physics, USB, Venezuela, 2010
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
 
-* Fall 2015: Research Assistant
-  * GitHub University
+* 2022 - 2025: Postdoctoral Researcher
+  * Rutgers University, New Jersey, USA
   * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+  * Supervisor: David Shih
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2019 - 2022: Postdoctoral Researcher & Teaching Assistant
+  * Zurich Univerzity (UZH), Zurich, Switzerland
+  * Duties included: 
+  * Supervisor: Gino Isidori
   
 Skills
 ======
