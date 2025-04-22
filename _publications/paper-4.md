@@ -1,15 +1,35 @@
 ---
-title: "Uncovering hidden new physics patterns in collider events using Bayesian probabilistic models"
+title: "EPiC-ly Fast Particle Cloud Generation with Flow-Matching and Diffusion"
 collection: publications
 category: manuscripts
-permalink: /publication/2020-15-12-bayesian-new-physics
-excerpt: 'This paper presents a Bayesian probabilistic approach to identify hidden patterns indicative of new physics in collider event data.'
-date: 2020-15-12
+date: 2023-29-09
 venue: 'Preprint'
 slidesurl: ''
+excerpt: 'Jets at the LHC, typically consisting of a large
+number of highly correlated particles, are a fascinating
+laboratory for deep generative modeling. In this paper,
+we present two novel methods that generate LHC jets
+as point clouds efficiently and accurately. We introduce
+EPiC-JeDi, which combines score-matching diffusion
+models with the Equivariant Point Cloud (EPiC) architecture based on the deep sets framework. This model offers
+a much faster alternative to previous transformer-based
+diffusion models without reducing the quality of the generated jets. In addition, we introduce EPiC-FM, the first
+permutation equivariant continuous normalizing flow
+(CNF) for particle cloud generation. This model is trained
+with flow-matching, a scalable and easy-to-train objective
+based on optimal transport that directly regresses the
+vector fields connecting the Gaussian noise prior to the
+data distribution. Our experiments demonstrate that
+EPiC-JeDi and EPiC-FM both achieve state-of-the-art
+performance on the top-quark JetNet datasets whilst
+maintaining fast generation speed. Most notably, we find
+that the EPiC-FM model consistently outperforms all the
+other generative models considered here across every
+metric. Finally, we also introduce two new particle cloud
+performance metrics: the first based on the KullbackLeibler divergence between feature distributions, the
+second is the negative log-posterior of a multi-model
+ParticleNet classifier.'
 paperurl: 'https://inspirehep.net/literature/1836854'
 bibtexurl: ''
-citation: 'Darius A. Faroughy. (2020). "Uncovering hidden new physics patterns in collider events using Bayesian probabilistic models." Preprint.'
+citation: 'Darius A. Faroughy. (2023). "EPiC-ly Fast Particle Cloud Generation with Flow-Matching and Diffusion." e-Print: 2310.00049 [hep-ph].'
 ---
-
-Individual events at high-energy colliders like the LHC can be represented by a sequence of measurements, or ‘point patterns’. Starting from this generic data representation, we build a simple Bayesian probabilistic model for event measurements useful for unsupervised event classification in beyond the standard model (BSM) studies. In order to arrive to this model we assume that the event measurements are exchangeable (and apply De Finetti’s representation theorem), the data is discrete, and measurements are generated from multiple ‘latent’ distributions (called themes). The resulting probabilistic model for collider events is a mixed-membership model known as Latent Dirichlet Allocation (LDA), a model extensively used in natural language processing applications. By training on mixed dijet samples of QCD and BSM, we demonstrate that a two-theme LDA model can learn to distinguish in (unlabelled) jet substructure data the hidden new physics patterns produced by a non-trivial BSM signature from a much larger QCD background.
