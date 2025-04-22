@@ -1,14 +1,14 @@
 {
   "basics": {
-    "name": "Your Sidebar Name",
-    "email": "none@example.org",
+    "name": "Darius A. Faroughy",
+    "email": "dariusfar@gmail.com",
     "phone": "",
-    "website": "https://academicpages.github.io",
-    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "website": "https://dfaroughy.github.io",
+    "summary": "Currently employed at Rutgers University. Short biography for the left-hand sidebar",
     "location": {
       "address": "",
       "postalCode": "",
-      "city": "Earth",
+      "city": "New York City | Jersey City",
       "countryCode": "US",
       "region": ""
     },
@@ -26,36 +26,60 @@
       {
         "network": "GitHub",
         "username": "academicpages",
-        "url": "https://github.com/academicpages"
+        "url": "https://github.com/dfaroughy"
       }
     ]
   },
-  "work": [],
+  "work": [
+
+    {
+      "institution": "Rutgers University",
+      "area": "Postgraduate associate",
+      "studyType": "Machine Learning applications to High Energy Physics ",
+      "startDate": "2022",
+      "endDate": "2025",
+      "gpa": null,
+      "courses": []
+    },
+
+    {
+      "institution": "University of Zurich",
+      "area": "Postgraduate Researcher",
+      "studyType": "Particle physics phenomenology",
+      "startDate": "2019",
+      "endDate": "2022",
+      "gpa": null,
+      "courses": []
+    },
+
+
+
+  ],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
+      "institution": "Jozef Stefan Institute",
+      "area": "Ph.D in Theoretical Particle Physics",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
+      "startDate": "2015",
+      "endDate": "2019",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
+      "institution": "International Center for Theoretical Physics (ICTP)",
+      "area": "Postgraduate Diploma in High Energy Physics",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
+      "startDate": "2011",
+      "endDate": "2013",
       "gpa": null,
       "courses": []
     },
     {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
+      "institution": "Universidad Simon Bolivar (USB)",
+      "area": "B.S. in Physics",
       "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
+      "startDate": "2005",
+      "endDate": "2011",
       "gpa": null,
       "courses": []
     }
