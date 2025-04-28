@@ -3,7 +3,7 @@ title: "Collider signatures of coannihilating dark matter in light of the B-phys
 collection: publications
 category: hep_papers
 date: 2020-12-15
-excerpt: 'We study a dark sector containing a Majorana dark matter candidate and a coloured coannihilation partner, connected to the Standard Model predominantly via a "4321" vector leptoquark'
+excerpt: 'We study a dark sector containing a Majorana dark matter particle and a coloured coannihilation partner, connected to the Standard Model predominantly via a "4321" vector leptoquark.'
 venue: 'Journal of High Energy Physics.'
 paperurl: 'https://link.springer.com/article/10.1007/JHEP11(2021)084'
 ---

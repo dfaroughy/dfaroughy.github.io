@@ -4,7 +4,7 @@ collection: publications
 category: ml_papers
 date: 2023-09-29
 venue: 'Journal of High Energy Physics'
-excerpt: 'We applied Latent Dirichlet Allocation, a Natural Language Processing technique, to model *particle clouds* from LHC collider events. We used this for unsupervised anomaly detection.'
+excerpt: 'We use Latent Dirichlet Allocation, a Natural Language Processing technique for topic modelling, to described tokenized *particle clouds* from LHC collider events. We show that our method can be used for unsupervised anomaly detection.'
 paperurl: 'https://link.springer.com/article/10.1007/JHEP10(2020)206'
 ---
 

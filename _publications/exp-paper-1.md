@@ -3,7 +3,7 @@ title: "Search for pair-produced vector-like leptons in final states with third-
 collection: publications
 category: exp_papers
 date: 2022-08-20
-excerpt: 'The first experimental search at the LHC is presented for vector-like leptons (VLLs) in the context of the “4321 model”.'
+excerpt: 'The first experimental search at the LHC for vector-like leptons in the context of the “4321 model”.'
 venue: Physics Letters B
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S0370269323000473?via%3Dihub'
 ---
