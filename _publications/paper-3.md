@@ -3,7 +3,7 @@ title: "Unlocking LHC Data for Foundation Models in Particle Physics"
 collection: publications
 category: ml_papers
 date: 2024-12-13
-excerpt: 'We demonstrate how data collected by the Large Hadron Collider (LHC) can be used to pre-train GPT-based Foundation Models for high-energy particle physics'
+excerpt: 'We provide a large dataset of high-energy jets collected by the Large Hadron Collider (LHC) and showed how it can be used to pre-train GPT-based Foundation Models for high-energy particle physics'
 venue: 'Machine Learning: Science and Technology'
 paperurl: 'https://arxiv.org/pdf/2412.10504'
 ---
