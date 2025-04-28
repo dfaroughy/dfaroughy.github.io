@@ -2,7 +2,7 @@
 title: "Closing the window on single leptoquark solutions to the B-physics anomalies"
 collection: publications
 category: hep_papers
-date: 2020-12-15
+date: 2018-08-14
 excerpt: 'We examine all possible scenarios in which the Standard Model is extended by a light leptoquark state to solve for one or both B-physics flavor anomalies.'
 venue: 'Journal of High Energy Physics'
 paperurl: 'https://link.springer.com/article/10.1007/JHEP10(2018)183'
