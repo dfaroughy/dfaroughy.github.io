@@ -1,17 +1,17 @@
 ---
-title: "EPiC-ly Fast Particle Cloud Generation with Flow-Matching and Diffusion"
+title: "Fast Particle Cloud Generation with Flow-Matching and Diffusion"
 collection: publications
 category: ml_papers
 venue: The European Physical Journal C  
 date: 2023-09-29
-except: In this paper we introduced permutation equivariant Flow-Matching and Diffusion models for particle-cloud generation, leading to state-of-the-art results.
+excerpt: In this paper we introduce permutation-equivariant Flow-Matching and Diffusion models for particle-cloud generation. The porposed architecture, which is a variant of deep-sets, achieves state-of-the-art results at the level of the much heavier transformer-based arthcitectures whilst
+maintaining a muche faster generation speed.
 paperurl: 'https://arxiv.org/pdf/2310.00049'
 keywords: 'Generative Ai, flow-matching, diffusion, point-clouds'
 ---
 
 abstract
 ===
-
 Jets at the LHC, typically consisting of a large
 number of highly correlated particles, are a fascinating
 laboratory for deep generative modeling. In this paper,
