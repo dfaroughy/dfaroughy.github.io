@@ -3,6 +3,7 @@ title: "Uncovering hidden new physics patterns in collider events using Bayesian
 collection: publications
 category: ml_papers
 date: 2022-09-15
+venue: 'Proceedings of Science'
 paperurl: 'https://pos.sissa.it/390/238/pdf'
 
 ---

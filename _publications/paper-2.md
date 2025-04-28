@@ -3,6 +3,7 @@ title: "Collider signatures of coannihilating dark matter in light of the B-phys
 collection: publications
 category: hep_papers
 date: 2020-12-15
+venue: 'Journal of High Energy Physics'
 paperurl: 'https://link.springer.com/article/10.1007/JHEP11(2021)084'
 ---
 
