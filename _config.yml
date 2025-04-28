@@ -24,8 +24,7 @@ author:
   # Biographic information
   avatar           : "profile.png"
   name             : "Darius A. Faroughy"
-  pronouns         : # example: "she/her"  
-  bio              : "Machine Learning | Data Science | Theoretical Particle Physicist | Researcher at NHETC, Rutgers University"
+  bio              : "Machine Learning | Data Science | Particle Physicist"
   employer         : "Rutgers University"
   uri              : # URL
   email            : "dariusfar@gmail.com" 

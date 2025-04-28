@@ -6,7 +6,6 @@ date: 2024-12-13
 excerpt: 'We provide a large dataset of 180M high-energy jets collected by the CMS experiment at the Large Hadron Collider (LHC) and show how it can be used to pre-train GPT-based Foundation Models for high-energy particle physics. We demonstrate that the performance of fine-tuned models on smalls amount of data follow scalling laws while models trained from scratch require much more  data in order to match the same performance.'
 venue: 'Machine Learning: Science and Technology'
 paperurl: 'https://arxiv.org/pdf/2412.10504'
-keywords: 'Foundation Models, GPT, transformers, pre-training, generative AI'
 ---
 
 abstract

@@ -6,7 +6,6 @@ date: 2025-05-01
 excerpt: 'In this paper, we present a multimodal generative model for particl-clouds with continuous and discrete features based. Our method combines flow-matching for the continuous modaliity and a Multivariate Random Telegraph process for the discrete modality.'
 venue: 'Machine Intelligence (in review)'
 paperurl: 'https://arxiv.org/pdf/2412.10504'
-keywords: 'Foundation Models, GPT, transformers, pre-training, generative AI'
 ---
 
 abstract
