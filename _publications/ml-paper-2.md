@@ -2,7 +2,7 @@
 title: "Fast Particle Cloud Generation with Flow-Matching and Diffusion"
 collection: publications
 category: ml_papers
-venue: The European Physical Journal C  
+venue: 'The European Physical Journal C'  
 date: 2023-09-29
 excerpt: In this paper we introduce permutation-equivariant Flow-Matching and Diffusion models for particle-cloud generation. The porposed architecture, which is a variant of deep-sets, achieves state-of-the-art results that match the much heavier transformer-based arthcitectures whilst
 maintaining a much faster generation speed.

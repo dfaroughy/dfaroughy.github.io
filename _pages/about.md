@@ -1,14 +1,11 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "My Background and Experience"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-
-About me
-======
 
 I am a theoretical particle physicist specializing in collider phenomenology and the development of theoretical models to interpret data from the Large Hadron Collider (LHC). Over the past decade, my research has focused on exploring beyond the Standard Model physics, employing both traditional analytical techniques and state-of-the-art machine learning methods.
 

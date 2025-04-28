@@ -73,15 +73,15 @@ author:
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
   ml_papers:
-    title: 'Applied Machine Learning'    
+    title: 'Generative AI and Machine Learning for Physics'    
+  stats_papers:
+    title: 'Statistical Modeling'
+  hep_papers:
+    title: 'Theoretical Particle Physics'
   exp_papers:
-    title: 'Experimental Physics'
+    title: 'Experimental Particle Physics'
   tools_papers:
     title: 'Tools and Software'
-  conf_papers:
-    title: 'Conference Papers'
-  hep_papers:
-    title: 'Particle Physics'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
