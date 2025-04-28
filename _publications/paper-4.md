@@ -4,11 +4,14 @@ collection: publications
 category: ml_papers
 venue: The European Physical Journal C  
 date: 2023-09-29
-except: In this paper we introduced permutation equivariant Flow-matching and diffusion models for particle-cloud generation, leading to state-of-the-art results.
+except: In this paper we introduced permutation equivariant Flow-Matching and Diffusion models for particle-cloud generation, leading to state-of-the-art results.
 paperurl: 'https://arxiv.org/pdf/2310.00049'
+keywords: 'Generative Ai, flow-matching, diffusion, point-clouds'
 ---
+
 abstract
 ===
+
 Jets at the LHC, typically consisting of a large
 number of highly correlated particles, are a fascinating
 laboratory for deep generative modeling. In this paper,
