@@ -1,7 +1,7 @@
 ---
 title: "HighPT: A tool for high-pT Drell-Yan tails beyond the Standard Model"
 collection: publications
-category: hep_papers
+category: tools_papers
 date: 2022-07-21
 excerpt: 'HighPT is a Mathematica package for the analysis of high-energy data of semileptonic transitions at hadron colliders.'
 venue: 'Computer Physics Communications'
