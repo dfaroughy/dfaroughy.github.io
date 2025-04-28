@@ -1,13 +1,13 @@
 ---
-title: "The LHC Olympics 2020 a community challenge for anomaly detection in high energy physics"
+title: "Learning the latent structure of collider events"
 collection: publications
-category: ml_papers
-date: 2021-12-07
-excerpt: 'We introiduce the LHC Olympics 2020, a community challenge where the participants have developed their methods using an R&D dataset and then tested them on black boxes: datasets with an unknown anomaly (or not). Methods made use of modern machine learning tools and were based on unsupervised learning (autoencoders, generative adversarial networks, normalizing flows), weakly supervised learning, and semi-supervised learning.'
-venue: 'Reports on Progress in Physics'
-paperurl: 'https://iopscience.iop.org/article/10.1088/1361-6633/ac36b9'
+category: stats_papers
+date: 2023-09-29
+venue: 'Journal of High Energy Physics'
+excerpt: 'We use Latent Dirichlet Allocation, a Natural Language Processing technique for topic modelling, to described tokenized *particle clouds* from LHC collider events. We show that our method can be used for unsupervised anomaly detection.'
+paperurl: 'https://link.springer.com/article/10.1007/JHEP10(2020)206'
 ---
 
 abstract
-====
-A new paradigm for data-driven, model-agnostic new physics searches at colliders is emerging, and aims to leverage recent breakthroughs in anomaly detection and machine learning. In order to develop and benchmark new anomaly detection methods within this framework, it is essential to have standard datasets. To this end, we have created the LHC Olympics 2020, a community challenge accompanied by a set of simulated collider events. Participants in these Olympics have developed their methods using an R&D dataset and then tested them on black boxes: datasets with an unknown anomaly (or not). Methods made use of modern machine learning tools and were based on unsupervised learning (autoencoders, generative adversarial networks, normalizing flows), weakly supervised learning, and semi-supervised learning. This paper will review the LHC Olympics 2020 challenge, including an overview of the competition, a description of methods deployed in the competition, lessons learned from the experience, and implications for data analyses with future datasets as well as future colliders.
+===
+We describe a technique to learn the underlying structure of collider events directly from the data, without having a particular theoretical model in mind. It allows to infer aspects of the theoretical model that may have given rise to this structure, and can be used to cluster or classify the events for analysis purposes. The unsupervised machine-learning technique is based on the Bayesian generative model of *Latent Dirichlet Allocation*. We pair the model with an approximate inference algorithm called Variational Inference, which we then use to extract the latent probability distributions describing the learned underlying structure of collider events. We provide a detailed systematic study of the technique using two example scenarios to learn the latent structure of di-jet event samples made up of QCD background events and either ttbar or hypothetical W′ → (ϕ → WW)W signal events. 

@@ -1,13 +1,13 @@
 ---
-title: "Uncovering hidden new physics patterns in collider events using Bayesian probabilistic models"
+title: "The LHC Olympics 2020 a community challenge for anomaly detection in high energy physics"
 collection: publications
 category: ml_papers
-date: 2022-09-15
-excerpt: 'We describe how a simple NLP probabilistic model for text topic modelling can describe "tokenized" particle jets and be used for anomaly detection.'
-venue: 'Proceedings of Science'
-paperurl: 'https://pos.sissa.it/390/238/pdf'
+date: 2021-12-07
+excerpt: 'We introiduce the LHC Olympics 2020, a community challenge where the participants have developed their methods using an R&D dataset and then tested them on black boxes: datasets with an unknown anomaly (or not). Methods made use of modern machine learning tools and were based on unsupervised learning (autoencoders, generative adversarial networks, normalizing flows), weakly supervised learning, and semi-supervised learning.'
+venue: 'Reports on Progress in Physics'
+paperurl: 'https://iopscience.iop.org/article/10.1088/1361-6633/ac36b9'
 ---
 
 abstract
 ====
-Individual events at high-energy colliders like the LHC can be represented by a sequence of measurements, or ‘point clouds’. Starting from this generic data representation, we build a simple Bayesian probabilistic model for event measurements useful for unsupervised event classification in beyond the standard model (BSM) studies. In order to arrive to this model we assume that the event measurements are exchangeable (and apply De Finetti’s representation theorem), the data is tokenized, and measurements are generated from multiple ‘latent’ distributions (called themes). The resulting probabilistic model for collider events is a mixed-membership model known as Latent Dirichlet Allocation (LDA), a model extensively used in natural language processing applications. By training on mixed dijet samples of QCD and BSM, we demonstrate that a two-theme LDA model can learn to distinguish in (unlabelled) jet substructure data the hidden new physics patterns produced by a non-trivial BSM signature from a much larger QCD background.
+A new paradigm for data-driven, model-agnostic new physics searches at colliders is emerging, and aims to leverage recent breakthroughs in anomaly detection and machine learning. In order to develop and benchmark new anomaly detection methods within this framework, it is essential to have standard datasets. To this end, we have created the LHC Olympics 2020, a community challenge accompanied by a set of simulated collider events. Participants in these Olympics have developed their methods using an R&D dataset and then tested them on black boxes: datasets with an unknown anomaly (or not). Methods made use of modern machine learning tools and were based on unsupervised learning (autoencoders, generative adversarial networks, normalizing flows), weakly supervised learning, and semi-supervised learning. This paper will review the LHC Olympics 2020 challenge, including an overview of the competition, a description of methods deployed in the competition, lessons learned from the experience, and implications for data analyses with future datasets as well as future colliders.

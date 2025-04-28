@@ -1,13 +1,13 @@
 ---
-title: "Learning the latent structure of collider events"
+title: "Uncovering hidden new physics patterns in collider events using Bayesian probabilistic models"
 collection: publications
-category: stats_papers
-date: 2023-09-29
-venue: 'Journal of High Energy Physics'
-excerpt: 'We use Latent Dirichlet Allocation, a Natural Language Processing technique for topic modelling, to described tokenized *particle clouds* from LHC collider events. We show that our method can be used for unsupervised anomaly detection.'
-paperurl: 'https://link.springer.com/article/10.1007/JHEP10(2020)206'
+category: ml_papers
+date: 2022-09-15
+excerpt: 'We describe how a simple NLP probabilistic model for text topic modelling can describe "tokenized" particle jets and be used for anomaly detection.'
+venue: 'Proceedings of Science'
+paperurl: 'https://pos.sissa.it/390/238/pdf'
 ---
 
 abstract
-===
-We describe a technique to learn the underlying structure of collider events directly from the data, without having a particular theoretical model in mind. It allows to infer aspects of the theoretical model that may have given rise to this structure, and can be used to cluster or classify the events for analysis purposes. The unsupervised machine-learning technique is based on the Bayesian generative model of *Latent Dirichlet Allocation*. We pair the model with an approximate inference algorithm called Variational Inference, which we then use to extract the latent probability distributions describing the learned underlying structure of collider events. We provide a detailed systematic study of the technique using two example scenarios to learn the latent structure of di-jet event samples made up of QCD background events and either ttbar or hypothetical W′ → (ϕ → WW)W signal events. 
+====
+Individual events at high-energy colliders like the LHC can be represented by a sequence of measurements, or ‘point clouds’. Starting from this generic data representation, we build a simple Bayesian probabilistic model for event measurements useful for unsupervised event classification in beyond the standard model (BSM) studies. In order to arrive to this model we assume that the event measurements are exchangeable (and apply De Finetti’s representation theorem), the data is tokenized, and measurements are generated from multiple ‘latent’ distributions (called themes). The resulting probabilistic model for collider events is a mixed-membership model known as Latent Dirichlet Allocation (LDA), a model extensively used in natural language processing applications. By training on mixed dijet samples of QCD and BSM, we demonstrate that a two-theme LDA model can learn to distinguish in (unlabelled) jet substructure data the hidden new physics patterns produced by a non-trivial BSM signature from a much larger QCD background.
