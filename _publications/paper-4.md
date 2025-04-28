@@ -3,10 +3,9 @@ title: "EPiC-ly Fast Particle Cloud Generation with Flow-Matching and Diffusion"
 collection: publications
 category: ml_papers
 date: 2023-09-29
-venue: 'Preprint'
-paperurl: 'https://arxiv.org/abs/2310.00049'
+paperurl: 'https://arxiv.org/pdf/2310.00049'
 ---
-<!-- Jets at the LHC, typically consisting of a large
+Jets at the LHC, typically consisting of a large
 number of highly correlated particles, are a fascinating
 laboratory for deep generative modeling. In this paper,
 we present two novel methods that generate LHC jets
@@ -29,4 +28,4 @@ other generative models considered here across every
 metric. Finally, we also introduce two new particle cloud
 performance metrics: the first based on the Kullback-Leibler divergence between feature distributions, the
 second is the negative log-posterior of a multi-model
-ParticleNet classifier.' -->
+ParticleNet classifier.

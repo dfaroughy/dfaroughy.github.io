@@ -1,9 +1,8 @@
 ---
-title: "Optimized Probes of the Charge-Parity Nature of the Top Quark Yukawa Coupling at Hadron Colliders"
+title: "Search for pair-produced vector-like leptons in final states with third-generation leptons and at least three b quark jets in proton-proton collisions at 13 TeV"
 collection: publications
-category: ml_papers
-date: 2021-06-24
-venue: 'Symmetry 13 (2021) 7, 1129'
-paperurl: 'https://inspirehep.net/literature/1882359'
+category: exp_papers
+date: 2022-08-20
+paperurl: 'https://www.sciencedirect.com/science/article/pii/S0370269323000473?via%3Dihub'
 ---
-<!-- We summarize our recent proposals for probing the CP-odd iκ˜t¯γ5th interaction at the LHC and its projected upgrades directly using associated on-shell Higgs boson and top quark or top quark pair production. We first recount how to construct a CP-odd observable based on top quark polarization in Wb→th scattering with optimal linear sensitivity to κ˜. For the corresponding hadronic process pp→thj we then present a method of extracting the phase-space dependent weight function that allows to retain close to optimal sensitivity to κ˜. For the case of top quark pair production in association with the Higgs boson, pp→tt¯h, with semileptonically decaying tops, we instead show how one can construct manifestly CP-odd observables that rely solely on measuring the momenta of the Higgs boson and the leptons and b-jets from the decaying tops without having to distinguish the charge of the b-jets. Finally, we introduce machine learning (ML) and non-ML techniques to study the phase-space optimization of such CP-odd observables. We emphasize a simple optimized linear combination α·ω that gives similar sensitivity as the studied fully fledged ML models. ' -->
+The first search is presented for vector-like leptons (VLLs) in the context of the “4321 model”, an ultraviolet-complete model with the potential to explain existing B physics measurements that are in tension with standard model predictions. The analyzed data, corresponding to an integrated luminosity of 96.5 inverse fb, were recorded in 2017 and 2018 with the CMS detector at the LHC in proton-proton collisions at 13 TeV. Final states with 3 b-tagged jets and two third-generation leptons are considered. Upper limits are derived on the VLL production cross section in the VLL mass range 500–1050 GeV. The maximum likelihood fit prefers the presence of signal at the level of 2.8 standard deviations, for a representative VLL mass point of 600 GeV. As a consequence, the observed upper limits are approximately double the expected limits.
