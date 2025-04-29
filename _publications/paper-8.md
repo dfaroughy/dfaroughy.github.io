@@ -1,9 +1,10 @@
 ---
+order: 8
 title: "Bayesian probabilistic modeling for four-top production at the LHC"
 collection: publications
 category: stats_papers
 date: 2021-07-01
-excerpt: 'We propose a Bayesian multinomial mixture model that is capable of capturing the jet multiplicity distributions of rare resonant processes involving multiple top-quarks at the LHC. 4 top-quarks produced at the Large Hadron Collider.'
+excerpt: 'We propose a Bayesian multinomial mixture model that is capable of capturing the jet multiplicity distributions of rare resonant processes involving four top-quarks at the LHC at CERN.'
 venue: 'Physical Review D'
 paperurl: 'https://journals.aps.org/prd/abstract/10.1103/PhysRevD.105.092001'
 ---
