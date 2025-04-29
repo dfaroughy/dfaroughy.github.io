@@ -1,4 +1,5 @@
 ---
+order: 10
 title: "HighPT: A tool for high-pT Drell-Yan tails beyond the Standard Model"
 collection: publications
 category: tools_papers

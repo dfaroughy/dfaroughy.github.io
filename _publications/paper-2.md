@@ -1,9 +1,10 @@
 ---
+order: 2
 title: "Unlocking LHC Data for Foundation Models in Particle Physics"
 collection: publications
 category: ml_papers
 date: 2024-12-13
-excerpt: 'We provide a large dataset of 180M high-energy jets collected by the CMS experiment at the Large Hadron Collider (LHC) and show how it can be used to pre-train GPT-based Foundation Models for high-energy particle physics. We demonstrate that the performance of fine-tuned models on smalls amount of data follow scalling laws while models trained from scratch require much more  data in order to match the same performance.'
+excerpt: 'We introduce a large dataset of 180M high-energy jets collected by the CMS experiment at the Large Hadron Collider (LHC) and show how it can be used to pre-train GPT-based Foundation Models for high-energy particle physics. We demonstrate that the performance of pretrained models finetuned on smalls amount of data follow *scalling laws* while the models trained from scratch have unstable training and require much more data to match in performance.'
 venue: 'Machine Learning: Science and Technology'
 paperurl: 'https://arxiv.org/pdf/2412.10504'
 ---

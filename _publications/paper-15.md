@@ -1,9 +1,10 @@
 ---
+order: 15
 title: "Search for pair-produced vector-like leptons in final states with third-generation leptons and at least three b quark jets in proton-proton collisions at 13 TeV"
 collection: publications
 category: exp_papers
 date: 2022-08-20
-excerpt: 'The first experimental search at the LHC for vector-like leptons in the context of the “4321 model”.'
+excerpt: 'The first experimental search by CMS at the LHC for vector-like leptons in the context of the “4321 model”.'
 venue: Physics Letters B
 paperurl: 'https://www.sciencedirect.com/science/article/pii/S0370269323000473?via%3Dihub'
 ---

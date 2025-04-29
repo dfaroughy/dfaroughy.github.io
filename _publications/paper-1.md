@@ -1,10 +1,11 @@
 ---
+order: 1
 title: "Flow-based Generative Modeling of Particle-Clouds with Multimodal Stochastic Bridges"
 collection: publications
 category: ml_papers
 date: 2025-05-01
-excerpt: 'In this paper, we present a multimodal generative model for particl-clouds with continuous and discrete features based. Our method combines flow-matching for the continuous modaliity and a Multivariate Random Telegraph process for the discrete modality.'
-venue: 'Machine Intelligence (in review)'
+excerpt: 'In this paper, we present a novel multimodal generative model for particle-clouds with continuous and discrete features. Our method combines flow-matching for the continuous modality with a Multivariate Random Telegraph process for the discrete modality. Our generative model achieves state-of-the-art performance on CMS open data.'
+venue: 'Preprint'
 paperurl: 'https://arxiv.org/pdf/2412.10504'
 ---
 

@@ -1,9 +1,10 @@
 ---
+order: 6
 title: "The LHC Olympics 2020 a community challenge for anomaly detection in high energy physics"
 collection: publications
 category: ml_papers
 date: 2021-12-07
-excerpt: 'We introiduce the LHC Olympics 2020, a community challenge where the participants have developed their methods using an R&D dataset and then tested them on black boxes: datasets with an unknown anomaly (or not). Methods made use of modern machine learning tools and were based on unsupervised learning (autoencoders, generative adversarial networks, normalizing flows), weakly supervised learning, and semi-supervised learning.'
+excerpt: 'We introiduce the **LHC Olympics 2020**, a community challenge where the participants develop their machine learning methods using an R&D dataset and then tested them on black box datasets with an unknown anomaly. We describe each of the proposed methods based on unsupervised learning (autoencoders, generative adversarial networks, normalizing flows), weakly supervised learning, and semi-supervised learning.'
 venue: 'Reports on Progress in Physics'
 paperurl: 'https://iopscience.iop.org/article/10.1088/1361-6633/ac36b9'
 ---

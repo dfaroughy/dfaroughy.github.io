@@ -1,9 +1,10 @@
 ---
+order: 9
 title: "Uncovering latent jet substructure"
 collection: publications
 category: stats_papers
 date: 2020-12-15
-excerpt: 'We use a mixed membership model known as Latent Dirichlet Allocation to build a data-driven unsupervised top-quark jet classifier.'
+excerpt: 'We use a mixed membership model known as Latent Dirichlet Allocation to build a data-driven unsupervised jet classifier.'
 venue: 'Physical Review D'
 paperurl: 'https://journals.aps.org/prd/abstract/10.1103/PhysRevD.100.056002'
 ---

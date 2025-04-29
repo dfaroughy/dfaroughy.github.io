@@ -1,4 +1,5 @@
 ---
+order: 12
 title: "Collider signatures of coannihilating dark matter in light of the B-physics anomalies"
 collection: publications
 category: hep_papers

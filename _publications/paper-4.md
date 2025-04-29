@@ -1,9 +1,10 @@
 ---
+order: 4
 title: "The Machine Learning landscape of top taggers"
 collection: publications
 category: ml_papers
 date: 2019-02-26
-excerpt: 'We compare a wide range of modern machine learning approaches for the classification task of top-quark jets.'
+excerpt: 'In this review we compare a wide range of modern machine learning approaches for the classification task of top-quark jets.'
 venue: 'SciPost'
 paperurl: 'https://scipost.org/10.21468/SciPostPhys.7.1.014'
 ---

@@ -1,9 +1,10 @@
 ---
+order: 11
 title: "Drell-Yan tails beyond the Standard Model"
 collection: publications
 category: hep_papers
 date: 2023-03-09
-excerpt: 'We investigate the high-pT tails of the Drell-Yan processes at hadron colliders as powerful probes of New Physics in semileptonic interactions with an arbitrary flavor structure.'
+excerpt: 'We investigate the high-pT tails of Drell-Yan processes at hadron colliders. We demonstrate that these are powerful probes of New Physics in semileptonic interactions with an arbitrary flavor structure.'
 venue: 'Journal of High Energy Physics'
 paperurl: 'https://link.springer.com/article/10.1007/JHEP03(2023)064'
 ---

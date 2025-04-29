@@ -1,9 +1,10 @@
 ---
+order: 16
 title: "Accessing CKM suppressed top decays at the LHC"
 collection: publications
 category: exp_papers
 date: 2024-05-24
-excerpt: 'We propose an extension of the existing probabilistic models for measuring branching fractions of top quark decays, to include light-quark information. We show that our model has an enhanced sensitivity accessible at the High-luminosity LHC.'
+excerpt: 'We propose an extension of the existing probabilistic models for measuring branching fractions of top quark decays, to include light-quark information. We show that our model has an enhanced sensitivity accessible to the High-luminosity LHC.'
 venue: 'SciPost'
 paperurl: 'https://scipost.org/10.21468/SciPostPhys.16.5.131'
 ---

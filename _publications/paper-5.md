@@ -1,9 +1,10 @@
 ---
+order: 5
 title: "Uncovering hidden new physics patterns in collider events using Bayesian probabilistic models"
 collection: publications
 category: ml_papers
 date: 2022-09-15
-excerpt: 'We describe how a simple NLP probabilistic model for text topic modelling can describe "tokenized" particle jets and be used for anomaly detection.'
+excerpt: 'We describe how a simple probabilistic language model for topic modelling can faithfully describe "tokenized" collider events and be used for anomaly detection.'
 venue: 'Proceedings of Science'
 paperurl: 'https://pos.sissa.it/390/238/pdf'
 ---
