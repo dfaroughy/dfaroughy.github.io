@@ -5,7 +5,7 @@ collection: publications
 category: ml_papers
 venue: 'The European Physical Journal C'  
 date: 2023-09-29
-excerpt: 'In this paper we introduce permutation-equivariant Flow-Matching and Diffusion models for particle-cloud generation. The porposed architecture, which is a variant of deep-sets, achieves state-of-the-art results that match the much heavier transformer-based arthcitectures whilst maintaining a much faster generation speed.'
+excerpt: 'In this paper we introduce permutation-equivariant Flow-Matching and Diffusion models for particle-cloud generation based on the EPIC architecture, a variant of deep-sets. We find that he proposed architecture achieves state-of-the-art results that match in performance the much heavier transformer-based arthcitectures whilst maintaining a much faster generation speed.'
 paperurl: 'https://arxiv.org/pdf/2310.00049'
 ---
 

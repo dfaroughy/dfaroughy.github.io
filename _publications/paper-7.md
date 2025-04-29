@@ -5,7 +5,7 @@ collection: publications
 category: stats_papers
 date: 2023-09-29
 venue: 'Journal of High Energy Physics'
-excerpt: 'We use Latent Dirichlet Allocation, a Natural Language Processing technique for topic modeling, to model tokenized *particle cloud* data from the LHC collider at CERN. We show that our method can be used for unsupervised anomaly detection.'
+excerpt: 'We use Latent Dirichlet Allocation, a Natural Language Processing technique for topic modeling for texts, to model tokenized *particle cloud* data from the LHC collider at CERN. We show that our method can be used for unsupervised anomaly detection.'
 paperurl: 'https://link.springer.com/article/10.1007/JHEP10(2020)206'
 ---
 

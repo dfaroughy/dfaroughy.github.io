@@ -20,22 +20,21 @@ Work experience
 
 * 2022 - 2025: Postdoctoral Researcher
   * Rutgers University, New Jersey, USA
-  * Duties included: Merging pull requests
   * Supervisor: David Shih
 
 * 2019 - 2022: Postdoctoral Researcher & Teaching Assistant
   * Zurich Univerzity (UZH), Zurich, Switzerland
-  * Duties included: 
+  * Duties included: Teaching assistant for advance master level courses (UZH, ETH)
   * Supervisor: Gino Isidori
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Languages:
+  * English (fluent)
+  * Spanish (fluent)
+  * French (fluent)
+  * Italian (beginner)
+* 
 
 Publications
 ======
