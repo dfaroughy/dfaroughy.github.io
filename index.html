@@ -116,6 +116,7 @@
   .feature .meta{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-faint);margin-bottom:20px}
   .feature .arrow{font-size:14px;color:var(--accent);font-weight:500;display:inline-flex;gap:7px;align-items:center;transition:gap .2s}
   .feature .arrow:hover{gap:13px}
+  .feature + .feature{margin-top:22px}
 
   /* selected work */
   .work-list{border-top:1px solid var(--line)}
@@ -216,12 +217,28 @@
     <h2 class="sec-title">Latest work</h2>
   </div>
   <div class="feature reveal">
-    <div class="kicker">New preprint · arXiv 2606.11256 · Jun 2026</div>
+    <div class="kicker">Chemistry · preprint 2606.11256 · Jun 2026</div>
     <h3>My Chemical Harness: evolving molecules along routes a chemist could actually run.</h3>
     <p>Most ML for molecular design dreams up promising structures and leaves the hard question — <em>can you actually make this?</em> — for later. This work flips that around. Instead of searching over molecular graphs, the search population is made of <strong>executable synthetic routes</strong>: chains of real reactions built from purchasable building blocks, validated and scored by deterministic chemistry tools.</p>
     <p>A large language model sits on top as a <strong>strategy controller</strong>, setting high-level preferences — how long a route to attempt, which reaction families and motifs to favour, how aggressively to explore — while the heavy lifting of building, checking, and scoring routes stays in trusted code. That split is the key idea: the model gets to guide the search without being able to hallucinate a reaction that doesn't exist. The result is candidate molecules that arrive with a feasible recipe attached.</p>
     <p class="meta">with C. Ojeda, M. Karimi, P. Zarrintaj, M. M. Seyedebrahimi, M. Carballo-Pacheco</p>
     <a class="arrow" href="#" id="open-preprint">Read the full preprint →</a>
+  </div>
+
+  <div class="feature reveal">
+    <div class="kicker">Agentic AI · preprint 2XXXXXXX · YYY 2026</div>
+    <h3>Collider-Bench: a common yardstick for generative models on collider data.</h3>
+    <p>Generative models for high-energy physics are multiplying fast, but they're hard to compare — every paper brings its own dataset, metrics, and preprocessing. <strong>Collider-Bench</strong> provides a shared suite of datasets, evaluation metrics, and baselines so that new generative approaches for collider physics can be measured on equal footing and progress becomes legible.</p>
+    <p class="meta">with … (add co-authors)</p>
+    <a class="arrow" href="https://github.com/dfaroughy/Collider-Bench" target="_blank" rel="noopener">View on GitHub →</a>
+  </div>
+
+  <div class="feature reveal">
+    <div class="kicker">Pharmacokinetics · UAI 2026 · arXiv XXXXXX · date</div>
+    <h3>A foundation model for pharmacokinetics: learning how a drug moves through the body.</h3>
+    <p>Pharmacokinetics — how a compound is absorbed, distributed, metabolised, and excreted — largely decides whether a promising molecule can become a usable drug. This work trains a <strong>foundation model</strong> on large-scale pharmacokinetic data, learning transferable representations of how compounds behave in the body that can be fine-tuned for prediction tasks across drug-discovery pipelines.</p>
+    <p class="meta">with … (add co-authors)</p>
+    <a class="arrow" href="#">Read more →</a>
   </div>
 </section>
 
