@@ -248,11 +248,13 @@
 
   <div class="feature reveal">
     <div class="kicker">Pharmacokinetics · UAI 2026 · Apr 2026</div>
-    <h3>A foundation model for pharmacokinetics: learning how drug concentration evolves through the body.</h3>
-    <p>Pharmacokinetics — how a compound is absorbed, distributed, metabolised, and excreted — largely decides whether a promising molecule can become a usable drug. This work builds a generative <strong>foundation model</strong> that learns from an entire study population in context: from sparse, irregular measurements it performs zero-shot synthesis of virtual patient cohorts and forecasts individual drug trajectories with calibrated uncertainty — no per-dataset retraining or manual tuning.</p>
+    <h3>Prior-fitted functional flows for pharmacokinetics.</h3>
+    <p>Pharmacokinetics studies how drug concentrations evolve in the body over time. The data are difficult for standard machine learning because clinical studies often include only a small number of patients, and each patient may have just a few irregular concentration measurements. Classical modeling pipelines usually require a pharmacology expert to build and tune a custom model for each new compound.</p>
+    <p>In this work, we built a <strong>zero-shot generative model</strong> for pharmacokinetic trajectories. The system is pretrained on simulated studies generated from domain-informed priors, then applied directly to real studies without additional training. From a small patient cohort, it can generate virtual patients, forecast future drug concentrations for a partially observed individual, and return uncertainty estimates.</p>
+    <p>The method combines <strong>transformer-based in-context learning with functional flow matching</strong>. Instead of fitting a separate model for each drug, it learns how to infer entire concentration-time functions from sparse context data. This makes the approach closer to a foundation model for pharmacokinetics, using pretraining, context, and scientific priors to replace much of the manual modeling loop.</p>
     <figure class="fig">
       <img src="images/pharmacokinetics.png" alt="Architecture of Prior-Fitted Functional Flows: a study-context encoder conditioning an encoder–decoder flow that forecasts past and future patient drug-concentration trajectories.">
-      <figcaption>Prior-Fitted Functional Flows: a study-context encoder conditions an encoder–decoder flow that forecasts each patient's past and future drug-concentration trajectory.</figcaption>
+      <figcaption>A transformer-based model for in-context pharmacokinetic prediction. It uses previous patients as study context and learns to forecast future concentration curves from only a few early measurements of a new patient.</figcaption>
     </figure>
     <p class="meta">with C. Ojeda, N. Hartung, W. Huisinga, T. Jahn, P. K. Kavwele, M. Klose, P. Kumar, R. J. Sánchez</p>
     <a class="arrow" href="https://arxiv.org/abs/2604.17670" target="_blank" rel="noopener">Read the preprint →</a>
