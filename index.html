@@ -92,6 +92,10 @@
   /* about */
   .about-grid{display:grid;grid-template-columns:1fr;gap:26px;font-size:18px;color:var(--ink-soft);max-width:680px}
   .about-grid p strong{color:var(--ink);font-weight:500}
+  .about-grid ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-top:-8px}
+  .about-grid li{position:relative;padding-left:24px}
+  .about-grid li::before{content:"•";position:absolute;left:2px;color:var(--accent);font-size:1.1em;line-height:1.4}
+  .about-grid li strong{color:var(--ink);font-weight:500}
   .tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
   .tag{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--ink-soft);border:1px solid var(--line);border-radius:2px;padding:6px 12px;background:var(--paper-2)}
 
@@ -128,6 +132,7 @@
   .work-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);white-space:nowrap;opacity:.75;padding-top:4px}
   .work-abs{padding:0 6px 26px 76px;max-width:780px;animation:absin .3s ease}
   .work-abs p{font-size:15px;line-height:1.72;color:var(--ink-soft);margin-bottom:14px}
+  .work-abs .venue{font-size:13.5px;color:var(--ink-faint)}
   .work-abs .lk{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--accent)}
   @keyframes absin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
 
@@ -194,9 +199,14 @@
     <h2 class="sec-title">About</h2>
   </div>
   <div class="about-grid reveal">
-    <p>I'm a research scientist trained in <strong>theoretical particle physics</strong>, now working at the intersection of <strong>machine learning and the natural sciences</strong>. My work follows a single thread applied at wildly different scales: building AI that respects the structure of scientific data — its symmetries, its discrete and continuous degrees of freedom, and the rules of the underlying domain.</p>
-    <p>That thread runs <strong>from the subatomic to the cosmological</strong>. At the <strong>smallest scales</strong>, I build generative and foundation models for particle collisions at the Large Hadron Collider (LHC). At the <strong>molecular scale</strong>, agentic methods for designing new molecules and materials. At the <strong>human scale</strong>, foundation models for pharmacokinetics — how a drug moves through the body. And at the <strong>cosmological scale</strong>, generative models for the large-scale structure of the universe.</p>
-    <p>The common thread is using AI to make scientific simulation, discovery, and design faster and more trustworthy. Currently based at <strong>Rutgers University</strong> (NHETC, Department of Physics &amp; Astronomy).</p>
+    <p>I build <strong>generative AI for scientific discovery</strong>. Trained as a <strong>theoretical particle physicist</strong>, I now research at the intersection of generative modeling and the natural sciences, with a focus on flow-matching, diffusion, foundation models, and agentic systems for complex scientific data. Recent contributions include introducing the first multimodal generative model for collider data, developing the first foundation model trained on real data from the Large Hadron Collider (LHC), and demonstrating neural scaling laws for jet generation. I led the development of a <strong>generative foundation model for pharmacokinetics</strong> time-series.</p>
+    <p>My latest research explores generative AI in three directions:</p>
+    <ul>
+      <li><strong>LLM-guided evolutionary search</strong> for de novo design of synthesizable molecules.</li>
+      <li><strong>Autonomous agents</strong> for scientific reasoning and discovery.</li>
+      <li><strong>Flow-matching models</strong> for the large-scale structure of the Universe and other cosmological data.</li>
+    </ul>
+    <p>Currently based at the <strong>New High Energy Theory Center</strong> at Rutgers University, Department of Physics &amp; Astronomy.</p>
     <div class="tags">
       <span class="tag">generative models</span>
       <span class="tag">flow matching</span>
@@ -256,7 +266,21 @@
       </summary>
       <div class="work-abs">
         <p>Designing molecules with target properties is most useful when candidate structures are accompanied by feasible synthetic routes. We introduce My Chemical Harness, a route-native evolutionary framework for goal-directed molecular design in which the search population consists of executable synthetic pathways rather than isolated molecular graphs. Each route is built from purchasable building blocks and reaction templates, executed by deterministic chemistry tools, and scored through task-specific molecular oracles. Large language models (LLMs) are used only as strategy controllers that select high-level preferences over route length, move type, reaction families, motifs, and exploration pressure, while local code performs route construction, validation, deduplication, scoring, selection, and memory updates. This separation lets the LLM guide exploration without allowing it to introduce hallucinated products or unsupported reaction steps. On a soluble epoxide hydrolase proxy task, our LLM agent improves over single pass LLM and deterministic controllers, reaching state-of-the-art performance across the sEH score, synthetic accessibility score, and AiZynthFinder success rate metrics. These results suggest that constrained LLM agents can play a significant role in molecular discovery without requiring training, fine-tuning, or dedicated generative models.</p>
+        <p class="venue"><em>Preprint</em></p>
         <a class="lk" href="https://arxiv.org/abs/2606.11256" target="_blank" rel="noopener">arXiv:2606.11256 →</a>
+      </div>
+    </details>
+
+    <details class="work-item">
+      <summary>
+        <span class="work-yr">2026</span>
+        <span class="work-main"><span class="t">Neural Scaling Laws for Jet Generation</span><span class="v">Do empirical scaling laws hold for generative jet models?</span></span>
+        <span class="work-tag">generative · HEP</span>
+      </summary>
+      <div class="work-abs">
+        <p>Recently observed empirical scaling laws describe the performance of foundation-type models as three independent key quantities — dataset size, compute, and model parameters — are modified. Extracting these scaling laws informs the training of large complex models for which the tuning of hyperparameters in traditional ways is not feasible. This work for the first time explores if scaling laws can also be observed for the task of particle jet generation — both relevant as a pre-training objective for foundation models and as in-situ simulation by itself. We indeed replicate the key logarithmic scaling law behavior for model-size scaling. Beyond studying the next token prediction validation loss of the generative model, we also study the sliced Wasserstein distance of five physical quantities that are not immediately available to the model during training. Our study shows that this quantity is monotonically related to the next token prediction validation loss, meaning that this loss is indeed a good proxy for the physics performance. For the scaling with dataset size and compute, we observe substantially weaker scaling behavior of both the loss and the sliced Wasserstein distance. We analyze this behavior by introducing the concept of a learnable window, and argue that autoregressive next token prediction on jet constituents exhibits comparatively rapid saturation relative to language-model studies. We discuss possible origins of this behavior, including the stochastic nature of QCD radiation and differences between generative and supervised learning tasks in collider physics.</p>
+        <p class="venue"><em>Preprint</em></p>
+        <a class="lk" href="https://arxiv.org/abs/2605.28940" target="_blank" rel="noopener">arXiv:2605.28940 →</a>
       </div>
     </details>
 
@@ -268,6 +292,7 @@
       </summary>
       <div class="work-abs">
         <p>Autonomous language-model agents are increasingly evaluated on long-horizon tool-use tasks, but existing benchmarks rarely capture the complexity and nuance of real scientific work. To address this gap, we introduce Collider-Bench, a benchmark for evaluating whether LLM agents can reproduce experimental analyses from the Large Hadron Collider (LHC) using only public papers and open scientific software. Such analyses are often difficult to reproduce because the public toolchain only approximates the software used internally by the experimental collaborations, while the published papers inevitably omit implementation details needed for a faithful reconstruction. Agents must therefore rely on physical reasoning, domain knowledge, and trial-and-error to fill these gaps. Each task requires the agent to turn a published analysis into an executable simulation-and-selection pipeline and submit predicted collision event yields in specified signal regions. These predictions are evaluated with standard histogram metrics that provide continuous fidelity scores without a hand-written rubric. We also report the computational cost incurred by each agent per task. Finally, we evaluate the codebase and full session trace using an LLM judge to catch qualitative failure modes such as fabrications, hallucinations and duplications. We release an initial set of tasks drawn from LHC searches, together with a containerized sandbox and event simulation tools. We evaluate across a capability ladder of general purpose coding agents. Our results show that on average no agent reliably beats the physicist-in-the-loop solution.</p>
+        <p class="venue"><em>Preprint</em></p>
         <a class="lk" href="https://arxiv.org/abs/2605.13950" target="_blank" rel="noopener">arXiv:2605.13950 →</a>
       </div>
     </details>
@@ -280,6 +305,7 @@
       </summary>
       <div class="work-abs">
         <p>We introduce Prior-Fitted Functional Flows, a generative foundation model for pharmacokinetics that enables zero-shot population synthesis and individual forecasting without manual parameter tuning. We learn functional vector fields, explicitly conditioned on the sparse, irregular data of an entire study population. This enables the generation of coherent virtual cohorts as well as forecasting of partially observed patient trajectories with calibrated uncertainty. We construct a new open-access literature corpus to inform our priors, and demonstrate state-of-the-art predictive accuracy on extensive real-world datasets.</p>
+        <p class="venue"><em>Uncertainty in Artificial Intelligence (UAI), 2026</em></p>
         <a class="lk" href="https://arxiv.org/abs/2604.17670" target="_blank" rel="noopener">arXiv:2604.17670 →</a>
       </div>
     </details>
@@ -292,6 +318,7 @@
       </summary>
       <div class="work-abs">
         <p>Generative modeling of high-energy collisions at the Large Hadron Collider (LHC) offers a data-driven route to simulations, anomaly detection, among other applications. A central challenge lies in the hybrid nature of particle-cloud data: each particle carries continuous kinematic features and discrete quantum numbers such as charge and flavor. We introduce a transformer-based multimodal flow that extends flow-matching with a continuous-time Markov jump bridge to jointly model LHC jets with both modalities. Trained on CMS Open Data, our model can generate high fidelity jets with realistic kinematics, jet substructure and flavor composition.</p>
+        <p class="venue"><em>NeurIPS 2025 ML4PS Workshop</em></p>
         <a class="lk" href="https://arxiv.org/abs/2509.01736" target="_blank" rel="noopener">arXiv:2509.01736 →</a>
       </div>
     </details>
@@ -304,7 +331,34 @@
       </summary>
       <div class="work-abs">
         <p>A generative flow model for the large-scale structure of the universe, learning to produce realistic three-dimensional configurations of cosmic-web matter. Released as an open-source codebase, with training and inference notebooks plus supporting utilities.</p>
+        <p class="venue"><em>Open-source code release</em></p>
         <a class="lk" href="https://github.com/dfaroughy/LSSFlow" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </details>
+
+    <details class="work-item">
+      <summary>
+        <span class="work-yr">2024</span>
+        <span class="work-main"><span class="t">Aspen Open Jets: Unlocking LHC Data for Foundation Models in Particle Physics</span><span class="v">A 178M-jet CMS Open Data release for pre-training HEP foundation models</span></span>
+        <span class="work-tag">foundation models · HEP</span>
+      </summary>
+      <div class="work-abs">
+        <p>Foundation models are deep learning models pre-trained on large amounts of data which are capable of generalizing to multiple datasets and/or downstream tasks. This work demonstrates how data collected by the CMS experiment at the Large Hadron Collider can be useful in pre-training foundation models for HEP. Specifically, we introduce the AspenOpenJets dataset, consisting of approximately 178M high pT jets derived from CMS 2016 Open Data. We show how pre-training the OmniJet-α foundation model on AspenOpenJets improves performance on generative tasks with significant domain shift: generating boosted top and QCD jets from the simulated JetClass dataset. In addition to demonstrating the power of pre-training of a jet-based foundation model on actual proton-proton collision data, we provide the ML-ready derived AspenOpenJets dataset for further public use.</p>
+        <p class="venue"><em>Machine Learning: Science and Technology 6 (2025) 030601</em></p>
+        <a class="lk" href="https://arxiv.org/abs/2412.10504" target="_blank" rel="noopener">arXiv:2412.10504 →</a>
+      </div>
+    </details>
+
+    <details class="work-item">
+      <summary>
+        <span class="work-yr">2023</span>
+        <span class="work-main"><span class="t">EPiC-ly Fast Particle Cloud Generation with Flow-Matching and Diffusion</span><span class="v">Fast equivariant diffusion and flow-matching for LHC jets</span></span>
+        <span class="work-tag">generative · HEP</span>
+      </summary>
+      <div class="work-abs">
+        <p>Jets at the LHC, typically consisting of a large number of highly correlated particles, are a fascinating laboratory for deep generative modeling. In this paper, we present two novel methods that generate LHC jets as point clouds efficiently and accurately. We introduce EPiC-JeDi, which combines score-matching diffusion models with the Equivariant Point Cloud (EPiC) architecture based on the deep sets framework. This model offers a much faster alternative to previous transformer-based diffusion models without reducing the quality of the generated jets. In addition, we introduce EPiC-FM, the first permutation equivariant continuous normalizing flow (CNF) for particle cloud generation. This model is trained with flow-matching, a scalable and easy-to-train objective based on optimal transport that directly regresses the vector fields connecting the Gaussian noise prior to the data distribution. Our experiments demonstrate that EPiC-JeDi and EPiC-FM both achieve state-of-the-art performance on the top-quark JetNet datasets whilst maintaining fast generation speed. Most notably, we find that the EPiC-FM model consistently outperforms all the other generative models considered here across every metric. Finally, we also introduce two new particle cloud performance metrics: the first based on the Kullback-Leibler divergence between feature distributions, the second is the negative log-posterior of a multi-model ParticleNet classifier.</p>
+        <p class="venue"><em>Preprint</em></p>
+        <a class="lk" href="https://arxiv.org/abs/2310.00049" target="_blank" rel="noopener">arXiv:2310.00049 →</a>
       </div>
     </details>
 
