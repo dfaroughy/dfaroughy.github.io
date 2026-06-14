@@ -59,7 +59,7 @@
     padding:120px clamp(20px,5vw,56px) 80px;
     max-width:var(--max);margin:0 auto;
   }
-  #field{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.9}
+  #field{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.9;transform:translateZ(0);will-change:transform}
   header .inner{position:relative;z-index:2;max-width:880px}
   .eyebrow{
     font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.18em;
@@ -81,15 +81,6 @@
   .btn.primary{background:var(--ink);color:var(--paper)}
   .btn.primary:hover{background:var(--accent);border-color:var(--accent)}
   .btn.ghost:hover{background:var(--ink);color:var(--paper)}
-  .scroll-hint{
-    position:absolute;bottom:30px;left:50%;transform:translateX(-50%);z-index:2;
-    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;
-    text-transform:uppercase;color:var(--ink-faint);
-    display:flex;flex-direction:column;align-items:center;gap:8px;
-  }
-  .scroll-hint span{width:1px;height:34px;background:linear-gradient(var(--ink-faint),transparent);animation:drop 2s infinite}
-  @keyframes drop{0%{opacity:0;transform:scaleY(.2);transform-origin:top}50%{opacity:1}100%{opacity:0;transform:scaleY(1);transform-origin:top}}
-
   /* ---------- sections ---------- */
   section{max-width:var(--max);margin:0 auto;padding:clamp(70px,11vw,120px) clamp(20px,5vw,56px)}
   .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:48px}
@@ -120,16 +111,25 @@
 
   /* selected work */
   .work-list{border-top:1px solid var(--line)}
-  .work-item{
-    display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:center;
-    padding:22px 6px;border-bottom:1px solid var(--line);
-    transition:padding-left .25s,background .25s;cursor:pointer;
+  .work-item{border-bottom:1px solid var(--line)}
+  .work-item>summary{
+    display:grid;grid-template-columns:56px 1fr auto;gap:20px;align-items:start;
+    padding:22px 6px;cursor:pointer;list-style:none;
+    transition:padding-left .25s,background .25s;
   }
-  .work-item:hover{padding-left:18px;background:var(--paper-2)}
-  .work-yr{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink-faint)}
-  .work-main .t{font-size:17px;font-weight:500;margin-bottom:3px}
+  .work-item>summary::-webkit-details-marker{display:none}
+  .work-item>summary::marker{content:""}
+  .work-item>summary:hover{padding-left:18px;background:var(--paper-2)}
+  .work-item[open]>summary{background:var(--paper-2)}
+  .work-yr{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--ink-faint);padding-top:2px}
+  .work-main{display:flex;flex-direction:column;gap:4px;min-width:0}
+  .work-main .t{font-size:17px;font-weight:500;line-height:1.3}
   .work-main .v{font-size:14px;color:var(--ink-faint)}
-  .work-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);white-space:nowrap;opacity:.75}
+  .work-tag{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);white-space:nowrap;opacity:.75;padding-top:4px}
+  .work-abs{padding:0 6px 26px 76px;max-width:780px;animation:absin .3s ease}
+  .work-abs p{font-size:15px;line-height:1.72;color:var(--ink-soft);margin-bottom:14px}
+  .work-abs .lk{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--accent)}
+  @keyframes absin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
 
   /* links / contact */
   .link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
@@ -180,13 +180,12 @@
   <div class="inner">
     <div class="eyebrow reveal">Research Scientist · ML / AI for Science</div>
     <h1 class="reveal">Machine learning for science, from the <em>sub-atomic</em> to the <em>molecular</em> to the <em>cosmological</em>.</h1>
-    <p class="lede reveal">I build <strong>generative and agentic machine-learning methods</strong> for science at every scale — from particle collisions at the Large Hadron Collider and the design of new molecules, to how drugs move through the human body and the large-scale structure of the cosmos.</p>
+    <p class="lede reveal">I build <strong>generative and agentic machine-learning methods</strong> for science at every scale — from particle collisions at the Large Hadron Collider and the design of new molecules, to how drugs are absorbed by the human body and the large-scale structure of the cosmos.</p>
     <div class="hero-cta reveal">
       <a class="btn primary" href="#latest">Read latest work →</a>
       <a class="btn ghost" href="#elsewhere">Get in touch</a>
     </div>
   </div>
-  <div class="scroll-hint"><span></span>Scroll</div>
 </header>
 
 <section id="about">
@@ -217,7 +216,7 @@
     <h2 class="sec-title">Latest work</h2>
   </div>
   <div class="feature reveal">
-    <div class="kicker">Chemistry · preprint 2606.11256 · Jun 2026</div>
+    <div class="kicker">Chemistry · preprint · Jun 2026</div>
     <h3>My Chemical Harness: evolving molecules along routes a chemist could actually run.</h3>
     <p>Most ML for molecular design dreams up promising structures and leaves the hard question — <em>can you actually make this?</em> — for later. This work flips that around. Instead of searching over molecular graphs, the search population is made of <strong>executable synthetic routes</strong>: chains of real reactions built from purchasable building blocks, validated and scored by deterministic chemistry tools.</p>
     <p>A large language model sits on top as a <strong>strategy controller</strong>, setting high-level preferences — how long a route to attempt, which reaction families and motifs to favour, how aggressively to explore — while the heavy lifting of building, checking, and scoring routes stays in trusted code. That split is the key idea: the model gets to guide the search without being able to hallucinate a reaction that doesn't exist. The result is candidate molecules that arrive with a feasible recipe attached.</p>
@@ -226,19 +225,19 @@
   </div>
 
   <div class="feature reveal">
-    <div class="kicker">Agentic AI · preprint 2XXXXXXX · YYY 2026</div>
-    <h3>Collider-Bench: a common yardstick for generative models on collider data.</h3>
-    <p>Generative models for high-energy physics are multiplying fast, but they're hard to compare — every paper brings its own dataset, metrics, and preprocessing. <strong>Collider-Bench</strong> provides a shared suite of datasets, evaluation metrics, and baselines so that new generative approaches for collider physics can be measured on equal footing and progress becomes legible.</p>
-    <p class="meta">with … (add co-authors)</p>
-    <a class="arrow" href="https://github.com/dfaroughy/Collider-Bench" target="_blank" rel="noopener">View on GitHub →</a>
+    <div class="kicker">Agentic AI · preprint · May 2026</div>
+    <h3>Collider-Bench: can language-model agents reproduce a real LHC analysis?</h3>
+    <p>AI agents promise to automate scientific work — but can they actually do it? <strong>Collider-Bench</strong> tests whether language-model agents can reproduce published Large Hadron Collider analyses using only the public papers and open scientific software, turning each study into an executable pipeline and predicting event yields. Agents are scored on both their numerical results and the quality of their code and reasoning. So far, they struggle to match a physicist guiding the process by hand.</p>
+    <p class="meta">with S. Palacios Schweitzer, I. Pang, S. Mishra-Sharma, D. Shih</p>
+    <a class="arrow" href="https://arxiv.org/abs/2605.13950" target="_blank" rel="noopener">Read the preprint →</a>
   </div>
 
   <div class="feature reveal">
-    <div class="kicker">Pharmacokinetics · UAI 2026 · arXiv XXXXXX · date</div>
+    <div class="kicker">Pharmacokinetics · UAI 2026 · Apr 2026</div>
     <h3>A foundation model for pharmacokinetics: learning how a drug moves through the body.</h3>
-    <p>Pharmacokinetics — how a compound is absorbed, distributed, metabolised, and excreted — largely decides whether a promising molecule can become a usable drug. This work trains a <strong>foundation model</strong> on large-scale pharmacokinetic data, learning transferable representations of how compounds behave in the body that can be fine-tuned for prediction tasks across drug-discovery pipelines.</p>
-    <p class="meta">with … (add co-authors)</p>
-    <a class="arrow" href="#">Read more →</a>
+    <p>Pharmacokinetics — how a compound is absorbed, distributed, metabolised, and excreted — largely decides whether a promising molecule can become a usable drug. This work builds a generative <strong>foundation model</strong> that learns from an entire study population in context: from sparse, irregular measurements it performs zero-shot synthesis of virtual patient cohorts and forecasts individual drug trajectories with calibrated uncertainty — no per-dataset retraining or manual tuning.</p>
+    <p class="meta">with C. Ojeda, N. Hartung, W. Huisinga, T. Jahn, P. K. Kavwele, M. Klose, P. Kumar, R. J. Sánchez</p>
+    <a class="arrow" href="https://arxiv.org/abs/2604.17670" target="_blank" rel="noopener">Read the preprint →</a>
   </div>
 </section>
 
@@ -248,26 +247,67 @@
     <h2 class="sec-title">Selected work</h2>
   </div>
   <div class="work-list reveal">
-    <a class="work-item" href="https://arxiv.org/abs/2606.11256" target="_blank" rel="noopener">
-      <span class="work-yr">2026</span>
-      <span class="work-main"><span class="t">My Chemical Harness</span><span class="v">Evolutionary molecular design over synthetic pathways with LLM agents</span></span>
-      <span class="work-tag">LLM agents</span>
-    </a>
-    <a class="work-item" href="https://arxiv.org/abs/2509.01736" target="_blank" rel="noopener">
-      <span class="work-yr">2025</span>
-      <span class="work-main"><span class="t">Multimodal Generative Flows for LHC Jets</span><span class="v">Transformer flow with a Markov-jump bridge for hybrid particle-cloud data</span></span>
-      <span class="work-tag">generative · HEP</span>
-    </a>
-    <a class="work-item" href="https://github.com/dfaroughy/LSSFlow" target="_blank" rel="noopener">
-      <span class="work-yr">2025</span>
-      <span class="work-main"><span class="t">LSSFlow</span><span class="v">Flow model for the large-scale structure of the universe</span></span>
-      <span class="work-tag">cosmology</span>
-    </a>
-    <a class="work-item" href="https://github.com/dfaroughy/Collider-Bench" target="_blank" rel="noopener">
-      <span class="work-yr">2024</span>
-      <span class="work-main"><span class="t">Collider-Bench</span><span class="v">Benchmarks for generative models on collider data</span></span>
-      <span class="work-tag">benchmark</span>
-    </a>
+
+    <details class="work-item">
+      <summary>
+        <span class="work-yr">2026</span>
+        <span class="work-main"><span class="t">My Chemical Harness: Evolutionary Molecular Design over Synthetic Pathways with Large Language Model Agents</span><span class="v">LLM agents as strategy controllers over executable synthetic routes</span></span>
+        <span class="work-tag">LLM agents</span>
+      </summary>
+      <div class="work-abs">
+        <p>Designing molecules with target properties is most useful when candidate structures are accompanied by feasible synthetic routes. We introduce My Chemical Harness, a route-native evolutionary framework for goal-directed molecular design in which the search population consists of executable synthetic pathways rather than isolated molecular graphs. Each route is built from purchasable building blocks and reaction templates, executed by deterministic chemistry tools, and scored through task-specific molecular oracles. Large language models (LLMs) are used only as strategy controllers that select high-level preferences over route length, move type, reaction families, motifs, and exploration pressure, while local code performs route construction, validation, deduplication, scoring, selection, and memory updates. This separation lets the LLM guide exploration without allowing it to introduce hallucinated products or unsupported reaction steps. On a soluble epoxide hydrolase proxy task, our LLM agent improves over single pass LLM and deterministic controllers, reaching state-of-the-art performance across the sEH score, synthetic accessibility score, and AiZynthFinder success rate metrics. These results suggest that constrained LLM agents can play a significant role in molecular discovery without requiring training, fine-tuning, or dedicated generative models.</p>
+        <a class="lk" href="https://arxiv.org/abs/2606.11256" target="_blank" rel="noopener">arXiv:2606.11256 →</a>
+      </div>
+    </details>
+
+    <details class="work-item">
+      <summary>
+        <span class="work-yr">2026</span>
+        <span class="work-main"><span class="t">Collider-Bench: Benchmarking AI Agents with Particle Physics Analysis Reproduction</span><span class="v">Can language-model agents reproduce a published LHC analysis?</span></span>
+        <span class="work-tag">agentic · HEP</span>
+      </summary>
+      <div class="work-abs">
+        <p>Autonomous language-model agents are increasingly evaluated on long-horizon tool-use tasks, but existing benchmarks rarely capture the complexity and nuance of real scientific work. To address this gap, we introduce Collider-Bench, a benchmark for evaluating whether LLM agents can reproduce experimental analyses from the Large Hadron Collider (LHC) using only public papers and open scientific software. Such analyses are often difficult to reproduce because the public toolchain only approximates the software used internally by the experimental collaborations, while the published papers inevitably omit implementation details needed for a faithful reconstruction. Agents must therefore rely on physical reasoning, domain knowledge, and trial-and-error to fill these gaps. Each task requires the agent to turn a published analysis into an executable simulation-and-selection pipeline and submit predicted collision event yields in specified signal regions. These predictions are evaluated with standard histogram metrics that provide continuous fidelity scores without a hand-written rubric. We also report the computational cost incurred by each agent per task. Finally, we evaluate the codebase and full session trace using an LLM judge to catch qualitative failure modes such as fabrications, hallucinations and duplications. We release an initial set of tasks drawn from LHC searches, together with a containerized sandbox and event simulation tools. We evaluate across a capability ladder of general purpose coding agents. Our results show that on average no agent reliably beats the physicist-in-the-loop solution.</p>
+        <a class="lk" href="https://arxiv.org/abs/2605.13950" target="_blank" rel="noopener">arXiv:2605.13950 →</a>
+      </div>
+    </details>
+
+    <details class="work-item">
+      <summary>
+        <span class="work-yr">2026</span>
+        <span class="work-main"><span class="t">Prior-Fitted Functional Flow: In-Context Generative Models for Pharmacokinetics</span><span class="v">Zero-shot population synthesis and individual forecasting</span></span>
+        <span class="work-tag">pharmacokinetics</span>
+      </summary>
+      <div class="work-abs">
+        <p>We introduce Prior-Fitted Functional Flows, a generative foundation model for pharmacokinetics that enables zero-shot population synthesis and individual forecasting without manual parameter tuning. We learn functional vector fields, explicitly conditioned on the sparse, irregular data of an entire study population. This enables the generation of coherent virtual cohorts as well as forecasting of partially observed patient trajectories with calibrated uncertainty. We construct a new open-access literature corpus to inform our priors, and demonstrate state-of-the-art predictive accuracy on extensive real-world datasets.</p>
+        <a class="lk" href="https://arxiv.org/abs/2604.17670" target="_blank" rel="noopener">arXiv:2604.17670 →</a>
+      </div>
+    </details>
+
+    <details class="work-item">
+      <summary>
+        <span class="work-yr">2025</span>
+        <span class="work-main"><span class="t">Multimodal Generative Flows for LHC Jets</span><span class="v">Transformer flow-matching with a Markov-jump bridge for particle clouds</span></span>
+        <span class="work-tag">generative · HEP</span>
+      </summary>
+      <div class="work-abs">
+        <p>Generative modeling of high-energy collisions at the Large Hadron Collider (LHC) offers a data-driven route to simulations, anomaly detection, among other applications. A central challenge lies in the hybrid nature of particle-cloud data: each particle carries continuous kinematic features and discrete quantum numbers such as charge and flavor. We introduce a transformer-based multimodal flow that extends flow-matching with a continuous-time Markov jump bridge to jointly model LHC jets with both modalities. Trained on CMS Open Data, our model can generate high fidelity jets with realistic kinematics, jet substructure and flavor composition.</p>
+        <a class="lk" href="https://arxiv.org/abs/2509.01736" target="_blank" rel="noopener">arXiv:2509.01736 →</a>
+      </div>
+    </details>
+
+    <details class="work-item">
+      <summary>
+        <span class="work-yr">2025</span>
+        <span class="work-main"><span class="t">CosmicWebFlow: a flow model for the large-scale structure of the universe</span><span class="v">Code · generating synthetic cosmic-web matter fields</span></span>
+        <span class="work-tag">cosmology</span>
+      </summary>
+      <div class="work-abs">
+        <p>A generative flow model for the large-scale structure of the universe, learning to produce realistic three-dimensional configurations of cosmic-web matter. Released as an open-source codebase, with training and inference notebooks plus supporting utilities.</p>
+        <a class="lk" href="https://github.com/dfaroughy/LSSFlow" target="_blank" rel="noopener">View on GitHub →</a>
+      </div>
+    </details>
+
   </div>
   <p class="reveal" style="margin-top:26px;font-size:14px;color:var(--ink-faint);font-family:'JetBrains Mono',monospace">
     Full publication list → <a href="https://scholar.google.com/citations?user=ZtXmX40AAAAJ" target="_blank" rel="noopener" style="color:var(--accent)">Google Scholar</a> · <a href="https://inspirehep.net/authors/1498216" target="_blank" rel="noopener" style="color:var(--accent)">INSPIRE-HEP</a>
@@ -342,7 +382,14 @@ addEventListener('keydown',e=>{if(e.key==='Escape')closePP()});
   let w,h,pts,mouse={x:-999,y:-999},dpr=Math.min(devicePixelRatio||1,2);
   function size(){w=c.clientWidth;h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);
     const n=Math.min(64,Math.floor(w*h/15000));
-    pts=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:Math.random()*1.6+.6}));}
+    pts=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:Math.random()*2.4+1.4,t:Math.random()}));}
+  /* coolwarm temperature map: blue (cold) -> white -> red (hot) */
+  function temp(t){
+    const cold=[33,102,172],mid=[247,247,247],hot=[178,24,43];
+    let a,b,u;
+    if(t<.5){a=cold;b=mid;u=t*2;}else{a=mid;b=hot;u=(t-.5)*2;}
+    return Math.round(a[0]+(b[0]-a[0])*u)+','+Math.round(a[1]+(b[1]-a[1])*u)+','+Math.round(a[2]+(b[2]-a[2])*u);
+  }
   size();addEventListener('resize',size);
   const head=document.querySelector('header');
   head.addEventListener('pointermove',e=>{const b=head.getBoundingClientRect();mouse.x=e.clientX-b.left;mouse.y=e.clientY-b.top;});
@@ -361,7 +408,7 @@ addEventListener('keydown',e=>{if(e.key==='Escape')closePP()});
       if(d<110){x.strokeStyle='rgba(31,58,147,'+(1-d/110)*.16+')';x.lineWidth=.6;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();}
     }
     /* points */
-    for(const p of pts){x.fillStyle='rgba(31,58,147,.5)';x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();}
+    for(const p of pts){x.fillStyle='rgba('+temp(p.t)+',.62)';x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fill();}
     requestAnimationFrame(loop);
   }
   loop();
