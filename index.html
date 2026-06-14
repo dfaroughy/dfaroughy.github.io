@@ -48,6 +48,9 @@
   nav .brand{font-family:'Fraunces',serif;font-weight:500;font-size:18px;letter-spacing:.01em}
   nav .links{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:10px clamp(13px,2.4vw,26px);font-size:14px;letter-spacing:.02em}
   nav .links .nav-sep{width:1px;height:14px;background:var(--line)}
+  nav .links a.nav-ico{display:inline-flex;align-items:center;padding:0;color:var(--ink-soft)}
+  nav .links a.nav-ico:hover{color:var(--accent)}
+  nav .links a.nav-ico::after{display:none}
   nav .links a{color:var(--ink-soft);position:relative;padding:2px 0}
   nav .links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:1px;background:var(--accent);transition:width .25s ease}
   nav .links a:hover{color:var(--ink)}
@@ -174,7 +177,7 @@
     <a href="https://github.com/dfaroughy" target="_blank" rel="noopener">GitHub</a>
     <a href="https://scholar.google.com/citations?user=ZtXmX40AAAAJ" target="_blank" rel="noopener">Scholar</a>
     <a href="https://orcid.org/0000-0002-4027-5477" target="_blank" rel="noopener">ORCID</a>
-    <a href="https://inspirehep.net/authors/1498216" target="_blank" rel="noopener">INSPIRE</a>
+    <a class="nav-ico" href="https://www.linkedin.com/in/darius-faroughy-phd/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>
   </div>
 </nav>
 
