@@ -419,8 +419,10 @@ addEventListener('keydown',e=>{if(e.key==='Escape')closePP()});
 (function(){
   if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
   const c=document.getElementById('field'),x=c.getContext('2d');
-  let w,h,pts,mouse={x:-999,y:-999},dpr=Math.min(devicePixelRatio||1,2);
+  let w,h,pts,seedW=0,mouse={x:-999,y:-999},dpr=Math.min(devicePixelRatio||1,2);
   function size(){w=c.clientWidth;h=c.clientHeight;c.width=w*dpr;c.height=h*dpr;x.setTransform(dpr,0,0,dpr,0,0);
+    if(pts&&w===seedW)return;   /* vertical-only resize (e.g. mobile URL bar) — keep particles, don't reseed */
+    seedW=w;
     const n=Math.min(64,Math.floor(w*h/15000));
     pts=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18,r:Math.random()*2.4+1.4,t:Math.random(),trail:[]}));}
   /* coolwarm temperature map: blue (cold) -> white -> red (hot) */
@@ -432,7 +434,7 @@ addEventListener('keydown',e=>{if(e.key==='Escape')closePP()});
   }
   size();addEventListener('resize',size);
   const head=document.querySelector('header');
-  head.addEventListener('pointermove',e=>{const b=head.getBoundingClientRect();mouse.x=e.clientX-b.left;mouse.y=e.clientY-b.top;});
+  head.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const b=head.getBoundingClientRect();mouse.x=e.clientX-b.left;mouse.y=e.clientY-b.top;});
   head.addEventListener('pointerleave',()=>{mouse.x=mouse.y=-999;});
   function loop(){
     x.clearRect(0,0,w,h);
@@ -441,9 +443,13 @@ addEventListener('keydown',e=>{if(e.key==='Escape')closePP()});
       if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;
       const dx=p.x-mouse.x,dy=p.y-mouse.y,d=Math.hypot(dx,dy);
       if(d<120){const f=(120-d)/120*.6;p.x+=dx/d*f;p.y+=dy/d*f;}
-      p.trail.push(p.x,p.y);
-      if(p.trail.length>800)p.trail.splice(0,p.trail.length-800);
     }
+    /* soft pairwise repulsion — smooth potential, low cross-section */
+    for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){
+      const a=pts[i],b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
+      if(d<40&&d>0.001){const s=(1-d/40),g=s*s*.55,ux=dx/d,uy=dy/d;a.x+=ux*g;a.y+=uy*g;b.x-=ux*g;b.y-=uy*g;}
+    }
+    for(const p of pts){p.trail.push(p.x,p.y);if(p.trail.length>800)p.trail.splice(0,p.trail.length-800);}
     /* trajectories */
     x.lineWidth=.6;
     for(const p of pts){
