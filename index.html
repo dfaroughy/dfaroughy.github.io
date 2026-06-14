@@ -46,7 +46,8 @@
   }
   nav.scrolled{border-color:var(--line)}
   nav .brand{font-family:'Fraunces',serif;font-weight:500;font-size:18px;letter-spacing:.01em}
-  nav .links{display:flex;gap:clamp(14px,3vw,34px);font-size:14px;letter-spacing:.02em}
+  nav .links{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:10px clamp(13px,2.4vw,26px);font-size:14px;letter-spacing:.02em}
+  nav .links .nav-sep{width:1px;height:14px;background:var(--line)}
   nav .links a{color:var(--ink-soft);position:relative;padding:2px 0}
   nav .links a::after{content:"";position:absolute;left:0;bottom:-3px;width:0;height:1px;background:var(--accent);transition:width .25s ease}
   nav .links a:hover{color:var(--ink)}
@@ -136,14 +137,6 @@
   .work-abs .lk{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--accent)}
   @keyframes absin{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
 
-  /* links / contact */
-  .link-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
-  .link-card{background:var(--paper);padding:26px 24px;transition:background .2s}
-  .link-card:hover{background:var(--paper-2)}
-  .link-card .lk{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:8px}
-  .link-card .lv{font-size:16px;font-weight:500;display:flex;align-items:center;gap:8px}
-  .link-card:hover .lv{color:var(--accent)}
-
   footer{max-width:var(--max);margin:0 auto;padding:40px clamp(20px,5vw,56px) 60px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--ink-faint);font-family:'JetBrains Mono',monospace}
 
   /* ---------- preprint viewer page ---------- */
@@ -175,8 +168,13 @@
   <div class="links">
     <a href="#about">About</a>
     <a href="#latest">Latest</a>
-    <a href="#work">Work</a>
-    <a href="#elsewhere">Contact</a>
+    <a href="#work">Publications</a>
+    <a href="mailto:darius.faroughy@rutgers.edu">Contact</a>
+    <span class="nav-sep" aria-hidden="true"></span>
+    <a href="https://github.com/dfaroughy" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://scholar.google.com/citations?user=ZtXmX40AAAAJ" target="_blank" rel="noopener">Scholar</a>
+    <a href="https://orcid.org/0000-0002-4027-5477" target="_blank" rel="noopener">ORCID</a>
+    <a href="https://inspirehep.net/authors/1498216" target="_blank" rel="noopener">INSPIRE</a>
   </div>
 </nav>
 
@@ -188,7 +186,7 @@
     <p class="lede reveal">I build <strong>generative models and AI agents</strong> for scientific discovery, with applications ranging from collider physics and molecular design to pharmacokinetics and cosmology.</p>
     <div class="hero-cta reveal">
       <a class="btn primary" href="#latest">Read latest work →</a>
-      <a class="btn ghost" href="#elsewhere">Get in touch</a>
+      <a class="btn ghost" href="mailto:darius.faroughy@rutgers.edu">Get in touch</a>
     </div>
   </div>
 </header>
@@ -199,14 +197,10 @@
     <h2 class="sec-title">About</h2>
   </div>
   <div class="about-grid reveal">
-    <p>I build <strong>generative AI for scientific discovery</strong>. Trained as a <strong>theoretical particle physicist</strong>, I now research at the intersection of generative modeling and the natural sciences, with a focus on flow-matching, diffusion, foundation models, and agentic systems for complex scientific data. Recent contributions include introducing the first multimodal generative model for collider data, developing the first foundation model trained on real data from the Large Hadron Collider (LHC), and demonstrating neural scaling laws for jet generation. I led the development of a <strong>generative foundation model for pharmacokinetics</strong> time-series.</p>
-    <p>My latest research explores generative AI in three directions:</p>
-    <ul>
-      <li><strong>LLM-guided evolutionary search</strong> for de novo design of synthesizable molecules.</li>
-      <li><strong>Autonomous agents</strong> for scientific reasoning and discovery.</li>
-      <li><strong>Flow-matching models</strong> for the large-scale structure of the Universe and other cosmological data.</li>
-    </ul>
-    <p>Currently based at the <strong>New High Energy Theory Center</strong> at Rutgers University, Department of Physics &amp; Astronomy.</p>
+    <p>I am a research scientist working on <strong>machine learning for scientific discovery</strong>. My background is in <strong>theoretical particle physics</strong>, and my current work focuses on generative models, foundation models, and AI agents for complex scientific data.</p>
+    <p>A central theme of my research is building models that do more than fit data: they should generate realistic scientific systems, quantify uncertainty, and help automate parts of the scientific workflow. I have worked on generative models for collider events, foundation models trained on real Large Hadron Collider data, neural scaling laws for jet generation, and in-context models for pharmacokinetics.</p>
+    <p>More recently, my work has expanded toward <strong>agentic systems for science</strong>, including LLM-guided molecular design, autonomous agents for collider-physics analysis, and flow-based generative models for cosmological structure.</p>
+    <p>I am currently based at the <strong>New High Energy Theory Center</strong> at Rutgers University.</p>
     <div class="tags">
       <span class="tag">generative models</span>
       <span class="tag">flow matching</span>
@@ -365,30 +359,6 @@
       </div>
     </details>
 
-  </div>
-</section>
-
-<section id="elsewhere">
-  <div class="sec-head reveal">
-    <span class="sec-num">04</span>
-    <h2 class="sec-title">Elsewhere</h2>
-  </div>
-  <div class="link-grid reveal">
-    <a class="link-card" href="mailto:hello@example.com">
-      <div class="lk">Email</div><div class="lv">Get in touch ↗</div>
-    </a>
-    <a class="link-card" href="https://github.com/dfaroughy" target="_blank" rel="noopener">
-      <div class="lk">Code</div><div class="lv">GitHub ↗</div>
-    </a>
-    <a class="link-card" href="https://scholar.google.com/citations?user=ZtXmX40AAAAJ" target="_blank" rel="noopener">
-      <div class="lk">Citations</div><div class="lv">Scholar ↗</div>
-    </a>
-    <a class="link-card" href="https://inspirehep.net/authors/1498216" target="_blank" rel="noopener">
-      <div class="lk">HEP record</div><div class="lv">INSPIRE ↗</div>
-    </a>
-    <a class="link-card" href="https://orcid.org/0000-0002-4027-5477" target="_blank" rel="noopener">
-      <div class="lk">ID</div><div class="lv">ORCID ↗</div>
-    </a>
   </div>
 </section>
 
