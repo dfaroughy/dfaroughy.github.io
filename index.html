@@ -116,6 +116,9 @@
   .feature .arrow{font-size:14px;color:var(--accent);font-weight:500;display:inline-flex;gap:7px;align-items:center;transition:gap .2s}
   .feature .arrow:hover{gap:13px}
   .feature + .feature{margin-top:22px}
+  .feature .fig{margin:8px 0 22px}
+  .feature .fig img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:4px;background:#fff}
+  .feature .fig figcaption{font-size:12.5px;color:var(--ink-faint);margin-top:10px;line-height:1.5}
 
   /* selected work */
   .work-list{border-top:1px solid var(--line)}
@@ -224,9 +227,9 @@
   </div>
   <div class="feature reveal">
     <div class="kicker">Chemistry · preprint · Jun 2026</div>
-    <h3>My Chemical Harness: evolving molecules along routes a chemist could actually run.</h3>
-    <p>Most ML for molecular design dreams up promising structures and leaves the hard question — <em>can you actually make this?</em> — for later. This work flips that around. Instead of searching over molecular graphs, the search population is made of <strong>executable synthetic routes</strong>: chains of real reactions built from purchasable building blocks, validated and scored by deterministic chemistry tools.</p>
-    <p>A large language model sits on top as a <strong>strategy controller</strong>, setting high-level preferences — how long a route to attempt, which reaction families and motifs to favour, how aggressively to explore — while the heavy lifting of building, checking, and scoring routes stays in trusted code. That split is the key idea: the model gets to guide the search without being able to hallucinate a reaction that doesn't exist. The result is candidate molecules that arrive with a feasible recipe attached.</p>
+    <h3>My Chemical Harness: LLM-guided molecular design with built-in synthesizability.</h3>
+    <p>Most AI approaches to molecular design optimize for promising structures first and worry about synthesis later. My Chemical Harness <strong>builds synthesizability into the search process from the start</strong>. Instead of generating molecules in isolation, the system evolves synthetic routes made from purchasable building blocks and validated reaction steps.</p>
+    <p>The LLM acts as a <strong>strategy layer</strong> on top of trusted chemistry software. It proposes high-level search directions — such as which reaction families, molecular motifs, or exploration settings to prioritize — while deterministic tools build, check, score, and select the candidates. This separation lets the model guide discovery without relying on hallucinated chemistry, producing molecules that are linked to explicit synthetic routes.</p>
     <p class="meta">with C. Ojeda, M. Karimi, P. Zarrintaj, M. M. Seyedebrahimi, M. Carballo-Pacheco</p>
     <a class="arrow" href="#" id="open-preprint">Read the full preprint →</a>
   </div>
@@ -235,13 +238,17 @@
     <div class="kicker">Agentic AI · preprint · May 2026</div>
     <h3>Collider-Bench: can language-model agents reproduce a real LHC analysis?</h3>
     <p>AI agents promise to automate scientific work — but can they actually do it? <strong>Collider-Bench</strong> tests whether language-model agents can reproduce published Large Hadron Collider analyses using only the public papers and open scientific software, turning each study into an executable pipeline and predicting event yields. Agents are scored on both their numerical results and the quality of their code and reasoning. So far, they struggle to match a physicist guiding the process by hand.</p>
+    <figure class="fig">
+      <img src="images/collider-bench.png" alt="Collider-Bench results: per-task fidelity distance by agent (left) and accuracy versus cost across agents (right).">
+      <figcaption>Per-task fidelity to the published result by agent (left) and accuracy vs. cost across agents (right). Only the physicist-in-the-loop baseline consistently stays below the d = 0.33 threshold.</figcaption>
+    </figure>
     <p class="meta">with S. Palacios Schweitzer, I. Pang, S. Mishra-Sharma, D. Shih</p>
     <a class="arrow" href="https://arxiv.org/abs/2605.13950" target="_blank" rel="noopener">Read the preprint →</a>
   </div>
 
   <div class="feature reveal">
     <div class="kicker">Pharmacokinetics · UAI 2026 · Apr 2026</div>
-    <h3>A foundation model for pharmacokinetics: learning how a drug moves through the body.</h3>
+    <h3>A foundation model for pharmacokinetics: learning how a drug evolves through the body.</h3>
     <p>Pharmacokinetics — how a compound is absorbed, distributed, metabolised, and excreted — largely decides whether a promising molecule can become a usable drug. This work builds a generative <strong>foundation model</strong> that learns from an entire study population in context: from sparse, irregular measurements it performs zero-shot synthesis of virtual patient cohorts and forecasts individual drug trajectories with calibrated uncertainty — no per-dataset retraining or manual tuning.</p>
     <p class="meta">with C. Ojeda, N. Hartung, W. Huisinga, T. Jahn, P. K. Kavwele, M. Klose, P. Kumar, R. J. Sánchez</p>
     <a class="arrow" href="https://arxiv.org/abs/2604.17670" target="_blank" rel="noopener">Read the preprint →</a>
