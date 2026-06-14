@@ -454,7 +454,11 @@ addEventListener('keydown',e=>{if(e.key==='Escape')closePP()});
     return Math.round(a[0]+(b[0]-a[0])*u)+','+Math.round(a[1]+(b[1]-a[1])*u)+','+Math.round(a[2]+(b[2]-a[2])*u);
   }
   size();addEventListener('resize',size);
-  addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const b=c.getBoundingClientRect();mouse.x=e.clientX-b.left;mouse.y=e.clientY-b.top;},{passive:true});
+  function aim(e){const b=c.getBoundingClientRect();mouse.x=e.clientX-b.left;mouse.y=e.clientY-b.top;}
+  addEventListener('pointermove',aim,{passive:true});
+  addEventListener('pointerdown',e=>{if(e.pointerType==='touch')aim(e);},{passive:true});
+  addEventListener('pointerup',e=>{if(e.pointerType==='touch'){mouse.x=mouse.y=-999;}},{passive:true});
+  addEventListener('pointercancel',e=>{if(e.pointerType==='touch'){mouse.x=mouse.y=-999;}},{passive:true});
   function loop(){
     x.clearRect(0,0,w,h);
     for(const p of pts){
