@@ -306,7 +306,7 @@
 
   <div class="feature reveal">
     <div class="kicker">Pharmacokinetics · UAI 2026 · Apr 2026</div>
-    <h3>Prior-fitted functional flows for pharmacokinetics.</h3>
+    <h3>Prior-fitted functional flows for Pharmacokinetics.</h3>
     <p>Pharmacokinetics studies how drug concentrations evolve in the body over time. The data are difficult for standard machine learning because clinical studies often include only a small number of patients, and each patient may have just a few irregular concentration measurements. Classical modeling pipelines usually require a pharmacology expert to build and tune a custom model for each new compound.</p>
     <p>In this work, we built a <strong>zero-shot generative model</strong> for pharmacokinetic trajectories. The system is pretrained on simulated studies generated from domain-informed priors, then applied directly to real studies without additional training. From a small patient cohort, it can generate virtual patients, forecast future drug concentrations for a partially observed individual, and return uncertainty estimates.</p>
     <p>The method combines <strong>transformer-based in-context learning with functional flow matching</strong>. Instead of fitting a separate model for each drug, it learns how to infer entire concentration-time functions from sparse context data. This makes the approach closer to a foundation model for pharmacokinetics, using pretraining, context, and scientific priors to replace much of the manual modeling loop.</p>
