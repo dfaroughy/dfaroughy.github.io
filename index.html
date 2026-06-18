@@ -245,8 +245,8 @@
 <header id="top">
   <canvas id="field"></canvas>
   <div class="inner">
-    <div class="eyebrow reveal">Research Scientist · ML / AI for Science</div>
-    <h1 class="reveal">Machine learning for science<br><span style="font-size:.8em">from <em>particles</em> to <em>molecules</em> to <em>galaxies</em>.</span></h1>
+    <div class="eyebrow reveal">Research Scientist · ML / AI for science</div>
+    <h1 class="reveal">Machine learning for science<br><span style="font-size:.64em">from <em>particles</em> to <em>molecules</em> to <em>galaxies</em>.</span></h1>
     <p class="lede reveal">I am a research scientist working on <strong>machine learning for scientific discovery</strong>. My background is in theoretical particle physics, and my current work focuses on generative models, foundation models, and agentic AI for complex scientific data.</p>
     <div class="hero-cta reveal">
       <a class="btn primary" href="#latest">Read latest work →</a>
@@ -309,7 +309,7 @@
     <h3>Prior-fitted functional flows for Pharmacokinetics.</h3>
     <p>Pharmacokinetics studies how drug concentrations evolve in the body over time. The data are difficult for standard machine learning because clinical studies often include only a small number of patients, and each patient may have just a few irregular concentration measurements. Classical modeling pipelines usually require a pharmacology expert to build and tune a custom model for each new compound.</p>
     <p>In this work, we built a <strong>zero-shot generative model</strong> for pharmacokinetic trajectories. The system is pretrained on simulated studies generated from domain-informed priors, then applied directly to real studies without additional training. From a small patient cohort, it can generate virtual patients, forecast future drug concentrations for a partially observed individual, and return uncertainty estimates.</p>
-    <p>The method combines <strong>transformer-based in-context learning with functional flow matching</strong>. Instead of fitting a separate model for each drug, it learns how to infer entire concentration-time functions from sparse context data. This makes the approach closer to a foundation model for pharmacokinetics, using pretraining, context, and scientific priors to replace much of the manual modeling loop.</p>
+    <p>The method combines <strong>transformer-based in-context learning with functional flow matching</strong>. Instead of fitting a separate model for each drug, it learns how to infer entire concentration-time functions from sparse context data. This makes the approach closer to a foundation model for pharmacokinetics, using pretraining, context, and scientific priors to replace much of the manual modeling loop. <strong>The paper has been accepted to the main conference at <a href="https://www.auai.org/uai2026/" target="_blank" rel="noopener" style="color:var(--accent)">UAI 2026</a>.</strong></p>
     <figure class="fig">
       <img src="images/pharmacokinetics.png" alt="Architecture of Prior-Fitted Functional Flows: a study-context encoder conditioning an encoder–decoder flow that forecasts past and future patient drug-concentration trajectories.">
       <figcaption>A transformer-based model for in-context pharmacokinetic prediction. It uses previous patients as study context and learns to forecast future concentration curves from only a few early measurements of a new patient.</figcaption>
